@@ -11,52 +11,75 @@
 }
 
 .popup-content {
-    width: 80%;
-    height: 90%;
-    background-color: white;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9; /* Light background */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px; /* Fixed width for larger screens */
+    width: 90%; /* Responsive width */
 }
 
 .popup-content h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
-.popup-content label {
-    display: block;
-    margin-bottom: 10px;
-    width: 20%; /* Set the width of labels */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
 }
 
-.popup-content input,
-.popup-content select {
-    width: 70%; /* Set the width of input/select */
+.input-group {
+    display: flex; /* Align items on the same line */
+    justify-content: space-between; /* Distribute space between and around content items */
+    align-items: center; /* Vertically center the items */
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.input-group input {
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
-.popup-content .input-group {
-    display: flex; /* Use flexbox to align label and input on the same line */
-    align-items: center;
+.button-group {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
 }
 
-.popup-content button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
+.add-btn, .cancel-btn {
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
-.popup-content button:hover {
-    background-color: #0056b3;
+.add-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
 }

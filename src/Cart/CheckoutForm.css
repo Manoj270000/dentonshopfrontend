@@ -14,10 +14,12 @@
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  width: 80%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Increased from 80% to 90% */
+  max-width: 800px; /* Example of a max-width to prevent the pop-up from becoming too wide on large screens */
   height: 90%;
 }
+
 
 h2 {
   margin-top: 0;
@@ -32,15 +34,20 @@ label {
   margin-bottom: 10px;
 }
 
+.card-container {
+  width: 100%; /* Ensure the container takes the full width of its parent */
+  max-width: 500px; /* Optional: limit the max-width as needed */
+  margin: 0 auto; /* Center the container if needed, but it will not affect the alignment of the CardElement */
+}
+
 .CardElement {
-  border: 2px solid #ccc; /* Add a 2px border with light gray color */
+  width: 200%; /* Ensure the CardElement takes the full width of its parent */
+  border: 2px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  margin-bottom: 20px;
-  transition: border-color 0.3s ease-in-out;
-  width: 300%;
-  max-width: 500px;
+  margin-bottom: 20px; /* Adjust spacing as needed */
 }
+
 
 button[type="submit"] {
   background-color: #007bff;

@@ -151,23 +151,26 @@ const CheckoutForm = ({ authIdToken, onClose, userEmail, totalCartPrice, name, p
                 <form onSubmit={handleSubmit}>
                     <label>
                         Credit/Debit Card Details:
-                        <CardElement
-                            options={{
+                        <div className="card-container">
+                            <CardElement
+                                options={{
                                 style: {
                                     base: {
-                                        fontSize: '16px',
-                                        color: '#424770',
-                                        '::placeholder': {
-                                            color: '#aab7c4',
-                                        },
+                                    fontSize: '16px',
+                                    color: '#424770',
+                                    '::placeholder': {
+                                        color: '#aab7c4',
+                                    },
                                     },
                                     invalid: {
-                                        color: '#9e2146',
+                                    color: '#9e2146',
                                     },
                                 },
-                            }}
-                            className="CardElement"
-                        />
+                                }}
+                                className="CardElement"
+                            />
+                            </div>
+
                     </label>
                     {paymentError && <div className="error-message">{paymentError}</div>}
                     <button type="submit" disabled={!stripe || paymentLoading} style={{width:'50%', backgroundColor:'green'}}>
