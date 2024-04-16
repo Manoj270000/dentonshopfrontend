@@ -223,12 +223,12 @@ const Home = ({ userEmail, authIdToken }) => {
             <p>Price: ${product.price}, Available:<strong>{product.quantityAvailable}</strong></p>
             {cart[product.id] > 0 ? (
               <div className="quantity-controls">
-                <button className="small-button" onClick={() => handleDecreaseQuantity(product.id)}>-</button>
+                <button className="small-button" style={{width:'auto'}} onClick={() => handleDecreaseQuantity(product.id)}>-</button>
                 <span>{cart[product.id]}</span>
-                <button className="small-button" onClick={() => handleIncreaseQuantity(product.id)}>+</button>
+                <button className="small-button" style={{width:'auto'}} onClick={() => handleIncreaseQuantity(product.id)}>+</button>
               </div>
             ) : (
-              <button className="add-to-cart-button" onClick={() => handleAddToCart(product.id)}>Add to Cart</button>
+              <button className="add-to-cart-button" style={{width:'auto'}} onClick={() => handleAddToCart(product.id)}>Add to Cart</button>
             )}
           </div>
         ))}
