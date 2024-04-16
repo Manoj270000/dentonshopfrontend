@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Capitalize titles */
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555; /* Softer color for the text */
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Space between team cards */
+}
+
+.team-member {
+  flex-basis: calc(50% - 20px); /* Subtract gap from the width */
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center align the text */
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Slight raise effect on hover */
+}
+
+.member-email {
+  font-size: 14px;
+  color: #3498db; /* Brand color for email */
+  word-break: break-all; /* Ensure long emails don't overflow */
+}
+
+.features-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  padding: 5px 0;
+  position: relative;
+  padding-left: 25px; /* Space for the checkmark */
+  font-weight: 500;
+}
+
+.features-list li::before {
+  content: '✓';
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    flex-basis: calc(100% - 20px); /* Full width on small screens */
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}

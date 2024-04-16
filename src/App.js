@@ -13,6 +13,7 @@ import CartItems from './Cart/CartItems';
 import OrdersHome from './Orders/OrdersHome';
 import AdminPageError from './AdminErrorPage';
 import "./Styles/App.css"
+import About from './Additional/About';
 
 
 Amplify.configure(config);
@@ -90,12 +91,16 @@ function App({ signOut, user }) {
           <Link to="/cart">
             <button >Cart</button>
           </Link>
+          <Link to="/about">
+            <button style={{backgroundColor:'pink'}}>About</button>
+          </Link>
           
           {(configDetails.adminUsers.includes(userEmail)) && (
             <Link to="/admin">
               <button className="adminButton" >Admin</button>
             </Link>
           )}
+          
         </div>
         <Switch>
           <Route path="/orders">
@@ -110,6 +115,9 @@ function App({ signOut, user }) {
           </Route>
           <Route path="/cart">
             <CartItems authIdToken={authIdToken} userEmail={userEmail} userName={authUserName} userPhone={authPhone}/>
+          </Route>
+          <Route path="/about">
+            <About/>
           </Route>
           <Route path="/">
             <Home authIdToken={authIdToken} userEmail={userEmail}/>
