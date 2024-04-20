@@ -89,10 +89,10 @@ function App({ signOut, user }) {
             <button className="profileButton">Profile</button>
           </Link>
           <Link to="/cart">
-            <button >Cart</button>
+            <button className='cartButton'>Cart</button>
           </Link>
           <Link to="/about">
-            <button style={{backgroundColor:'pink'}}>About</button>
+            <button style={{backgroundColor:'white', color:'black'}}>About</button>
           </Link>
           
           {(configDetails.adminUsers.includes(userEmail)) && (

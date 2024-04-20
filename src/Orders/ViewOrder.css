@@ -10,6 +10,35 @@
     align-items: center;
 }
 
+/* Table Styles */
+table {
+    width: 96%; /* Slightly reduced width for aesthetics */
+    margin: 2% auto; /* Centering the table */
+    border-collapse: collapse; /* Ensures borders are neat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background: white; /* Clean white background for contrast */
+}
+
+th, td {
+    padding: 12px 15px; /* Ample padding for readability */
+    border-bottom: 1px solid #ddd; /* Subtle separation between rows */
+}
+
+th {
+    background-color: #009688; /* Teal background for headers */
+    color: white; /* White text for contrast */
+    text-align: left;
+}
+/* Header Styles */
+h2 {
+    text-align: center;
+    background-color: #009688; /* Teal color to match table headers */
+    color: white;
+    padding: 10px 0;
+    border-radius: 6px;
+    margin: 20px 2% 10px; /* Matching table margins */
+}
+
 .popup-content {
     background-color: white;
     padding: 20px;
@@ -77,4 +106,30 @@
   transform: translateX(-50%);
   text-align: center;
   font-size: 14px;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50; /* Green for positive actions */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #367c39;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 80%; /* More screen usage on smaller devices */
+    }
+
+    table, th, td {
+        font-size: 14px; /* Smaller text for smaller screens */
+    }
 }

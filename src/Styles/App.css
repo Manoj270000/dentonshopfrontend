@@ -118,6 +118,14 @@ button {
   margin:20px;
 }
 
+.cartButton {
+  background-color: lightsalmon;
+  color: #ffffff;
+  width: 100px;
+  height:40px;
+  margin:20px;
+}
+
 .profileButton {
   background-color: #28a745;
   color: #ffffff;

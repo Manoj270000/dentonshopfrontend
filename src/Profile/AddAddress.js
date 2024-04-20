@@ -114,7 +114,7 @@ const AddAddress = ({ onClose, userEmail, authIdToken }) => {
                     <input type="tel" id="phone" name="phone" value={addressDetails.phone} onChange={handleInputChange} placeholder="10 Digits" />
                 </div>
                 <div className="button-group">
-                    <button className="add-btn" style={{width:'auto'}} onClick={handleAddAddress}>Add Address</button>
+                    <button className="add-btn"  onClick={handleAddAddress}>Add Address</button>
                     <button className="cancel-btn" onClick={onClose}>Cancel</button>
                 </div>
             </div>
