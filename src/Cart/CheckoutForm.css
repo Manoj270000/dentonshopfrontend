@@ -36,7 +36,7 @@ label {
 
 .card-container {
   width: 100%; /* Ensure the container takes the full width of its parent */
-  max-width: 500px; /* Optional: limit the max-width as needed */
+  max-width: 250px; /* Optional: limit the max-width as needed */
   margin: 0 auto; /* Center the container if needed, but it will not affect the alignment of the CardElement */
 }
 
